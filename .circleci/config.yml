@@ -1,14 +1,14 @@
 version: 2.1
 jobs:
-  spuyo:
+  discovery-service:
     docker:
-      - image: spuyo/spuyo-ci
+      - image: spuyo/discovery-service
     steps:
       - checkout
       - run:
           name: Hello
-          command: echo "Hello spuyo" && ls
+          command: echo "Hello spuyo - I am running the discovery-service" && ls
 workflows:
   spuyo:
     jobs:
-      - spuyo
+      - discovery-service
