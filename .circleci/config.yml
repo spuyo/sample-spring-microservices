@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  jbrotons:
+  spuyo:
     docker:
       - image: spuyo/spuyo-ci
     steps:
@@ -9,6 +9,6 @@ jobs:
           name: Hello
           command: echo "Hello spuyo" && ls
 workflows:
-  jbrotons:
+  spuyo:
     jobs:
       - spuyo
