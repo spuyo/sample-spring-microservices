@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   discovery:
-    image: piomin/discovery-service
+    image: spuyo/discovery-service
     container_name: discovery-service
     build:
       context: ./discovery-service
@@ -10,7 +10,7 @@ services:
       - "8761:8761"
 
   gateway:
-    image: piomin/gateway-service
+    image: spuyo/gateway-service
     container_name: service-gateway
     build:
       context: ./gateway-service
@@ -23,7 +23,7 @@ services:
       - discovery
 
   zipkin-service:
-    image: piomin/zipkin-service
+    image: spuyo/zipkin-service
     container_name: zipkin-service
     build:
       context: ./zipkin-service
@@ -32,7 +32,7 @@ services:
       - "9411:9411"
 
   account-service:
-    image: piomin/account-service
+    image: spuyo/account-service
     container_name: account-service
     build:
       context: ./account-service
@@ -45,7 +45,7 @@ services:
       - discovery
 
   customer-service:
-    image: piomin/customer-service
+    image: spuyo/customer-service
     container_name: customer-service
     build:
       context: ./customer-service
